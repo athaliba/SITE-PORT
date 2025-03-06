@@ -1,0 +1,142 @@
+/* Reset básico */
+* {
+    margin: 0; /* Remove margens padrão de todos os elementos */
+    padding: 0; /* Remove preenchimentos padrão de todos os elementos */
+    box-sizing: border-box; /* Faz com que o padding e a borda sejam incluídos no tamanho total do elemento */
+}
+
+/* Estilo geral do corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    background-color: #f4f4f9; /* Cor de fundo do corpo da página */
+    color: #333; /* Cor do texto padrão */
+    display: flex; /* Usa flexbox para organizar o layout */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    min-height: 100vh; /* Garante que o body tenha no mínimo a altura da tela */
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #333; /* Cor de fundo do cabeçalho */
+    color: white; /* Cor do texto no cabeçalho */
+    padding: 7px 0; /* Espaçamento interno no topo e na base do cabeçalho */
+    text-align: center; /* Centraliza o texto no cabeçalho */
+    position: relative; /* Define o posicionamento como relativo */
+    min-height: 100px; /* Altura mínima do cabeçalho */
+}
+
+/* Container que organiza o nome, logo e profissão */
+.container {
+    display: flex; /* Usa flexbox para organizar os elementos */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    justify-content: center; /* Centraliza os elementos verticalmente */
+    text-align: center; /* Centraliza o texto */
+    gap: 20px; /* Espaçamento entre os elementos */
+}
+
+/* Estilo da logo */
+.logo-img {
+    width: 170px; /* Largura da logo */
+    height: auto; /* Altura ajustada automaticamente para manter a proporção */
+}
+
+/* Estilo do nome e profissão */
+.texto h1 {
+    font-size: 2.2em; /* Tamanho da fonte do nome */
+    margin: 10px 0; /* Margem superior e inferior */
+}
+
+.texto p {
+    font-size: 1.2em; /* Tamanho da fonte da profissão */
+}
+
+/* Estilo do menu de navegação */
+nav ul {
+    list-style: none; /* Remove os marcadores de lista */
+    display: flex; /* Usa flexbox para organizar os itens do menu */
+    gap: 20px; /* Espaçamento entre os itens do menu */
+    justify-content: center; /* Centraliza os itens do menu */
+    padding: 10px 0; /* Espaçamento interno no topo e na base do menu */
+}
+
+nav ul li {
+    display: inline-block; /* Exibe os itens do menu em linha */
+}
+
+nav ul li a {
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 1.1em; /* Tamanho da fonte dos links */
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #ff6347; /* Adiciona uma borda inferior ao passar o mouse */
+}
+
+.curriculo {
+    padding: 40px 50px;
+}
+
+.curriculo .container {
+    display: block; /* Garantir que as divs .info fiquem empilhadas */
+}
+
+.perfil {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.perfil img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.perfil h2 {
+    margin: 10px 0;
+}
+
+.info {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-left: 5px solid #222;
+    border-radius: 5px;
+    width: 100%; /* Garante que cada .info ocupe toda a largura disponível */
+}
+
+.info h3 {
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.info p, .info ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.info ul li {
+    margin-bottom: 5px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.info ul li::before {
+    content: '\2022';
+    color: #222;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+    margin-top: 20px;
+}
