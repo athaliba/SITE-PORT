@@ -1,11 +1,9 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilo geral do corpo da página */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -15,7 +13,6 @@ body {
     min-height: 100vh;
 }
 
-/* Estilo do cabeçalho */
 header {
     background-color: #333;
     color: white;
@@ -25,7 +22,6 @@ header {
     min-height: 100px;
 }
 
-/* Container que organiza o nome, logo e profissão */
 .container {
     display: flex;
     flex-direction: column;
@@ -35,13 +31,11 @@ header {
     gap: 20px;
 }
 
-/* Estilo da logo */
 .logo-img {
     width: 170px;
     height: auto;
 }
 
-/* Estilo do nome e profissão */
 .texto h1 {
     font-size: 2.2em;
     margin: 10px 0;
@@ -51,7 +45,6 @@ header {
     font-size: 1.2em;
 }
 
-/* Estilo do menu de navegação */
 nav ul {
     list-style: none;
     display: flex;
@@ -74,7 +67,6 @@ nav ul li a:hover {
     border-bottom: 2px solid #ff6347;
 }
 
-/* Estilo do conteúdo principal */
 main {
     display: flex;
     flex-direction: column;
@@ -82,12 +74,10 @@ main {
     padding: 20px;
 }
 
-/* Estilo do contêiner de imagens */
 .image-container {
     width: 100%;
 }
 
-/* Estilo das caixas de imagem */
 .image-box {
     display: flex;
     flex-direction: row;
@@ -96,32 +86,29 @@ main {
     border: 2px solid #333;
     padding: 10px;
     border-radius: 10px;
-    width: 100%; /* Garante que as caixas de imagem usem toda a largura disponível */
+    width: 100%; 
 }
 
-/* Estilo das imagens */
 .image {
-    width: 300px; /* Define a largura das imagens */
-    height: 300px; /* Define a altura das imagens */
-    border-radius: 100%; /* Bordas arredondadas das imagens */
+    width: 300px; 
+    height: 300px;
+    border-radius: 100%;
     margin-right: 10px;
-    flex-shrink: 0; /* Impede que as imagens sejam comprimidas */
+    flex-shrink: 0; 
 }
 
-/* Estilo específico para o texto BAJA */
 .text-baja {
-    text-align: left; /* Alinha o texto à esquerda */
+    text-align: left; 
     text-align: justify;
     
     font-size: 1em;
     color: #333;
     margin: auto 10px;
-    flex: 1; /* Permite que o texto use o espaço restante */
+    flex: 1; 
 }
 
-/* Estilo específico para o texto NOVAEKINATA */
 .text-novaekinata {
-    text-align: left; /* Alinha o texto à esquerda */
+    text-align: left;
     text-align: justify;
 
     font-size: 1em;
@@ -129,12 +116,10 @@ main {
     margin: auto 10px;
 }
 
-/* Alinhamento das caixas de imagem */
 .image-box.left {
     justify-content: flex-start;
 }
 
-/* Estilo do rodapé */
 footer {
     background-color: #333;
     color: white;
