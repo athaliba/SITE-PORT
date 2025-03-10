@@ -65,83 +65,76 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white; /* Cor do texto dos links */
-    text-decoration: none; /* Remove o sublinhado dos links */
-    font-size: 1.1em; /* Tamanho da fonte dos links */
+    color: white;
+    text-decoration: none; 
+    font-size: 1.1em; 
 }
 
 nav ul li a:hover {
-    border-bottom: 2px solid #ff6347; /* Adiciona uma borda inferior ao passar o mouse */
+    border-bottom: 2px solid #ff6347; 
 }
-
-.curriculo {
-    padding: 40px 50px;
-}
-
-.curriculo .container {
-    display: block; /* Garantir que as divs .info fiquem empilhadas */
-}
-
-.perfil {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.perfil img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.perfil h2 {
-    margin: 10px 0;
-}
-
-.info {
-    margin-bottom: 20px;
-    padding: 15px;
-    background: #f9f9f9;
-    border-left: 5px solid #222;
-    border-radius: 5px;
-    width: 100%; /* Garante que cada .info ocupe toda a largura disponível */
-}
-
-.info.sobre p {
-    text-align: justify;
-    line-height: 1.4; /* Ajuste este valor conforme necessário para o espaçamento desejado */
-}
-
-.info h3 {
-    margin-bottom: 10px;
-    color: #222;
-}
-
-.info p, .info ul {
+body, html {
     margin: 0;
     padding: 0;
-    list-style: none;
+    height: 100%;
 }
 
-.info ul li {
-    margin-bottom: 5px;
-    padding-left: 15px;
+.content {
+    display: flex;
+    width: 100vw; 
+    height: 100vh;
+}
+
+.link-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    box-shadow: inset 4px 4px 6px rgba(255, 255, 255, 0.3),
+                inset -4px -4px 6px rgba(0, 0, 0, 0.3),
+                4px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.6s ease;
 }
 
-.info ul li::before {
-    content: '\2022';
-    color: #222;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
+
+.link-item:hover {
+    box-shadow: inset 6px 6px 8px rgba(255, 255, 255, 0.4),
+                inset -6px -6px 8px rgba(0, 0, 0, 0.4),
+                6px 6px 12px rgba(0, 0, 0, 0.6);
+    transform: scale(1.05); 
 }
 
-/* Footer */
+
+.whatsapp {
+    background: linear-gradient(to bottom, #25D366, #1a9f4a);
+}
+
+.linkedin {
+    background: linear-gradient(to bottom, #A0D8EF, #4f94c3);
+}
+
+.instagram {
+    background: linear-gradient(to bottom, #AA47BC, #803489);
+}
+
+.form {
+    background: linear-gradient(to bottom, #F8E8B3, #e6c573);
+}
+
+
+.link-item img {
+    width: 80px;
+    height: auto;
+    filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.5)); 
+}
+
+
 footer {
-    text-align: center;
-    padding: 10px;
-    background: #222;
-    color: white;
-    margin-top: 20px;
+    background-color: #333; 
+    color: white; 
+    text-align: center; 
+    padding: 15px 0; 
+    font-size: 1em; 
+    margin-top: auto;
 }
