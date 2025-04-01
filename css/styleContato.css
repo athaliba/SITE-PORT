@@ -67,13 +67,12 @@ nav ul li a:hover {
     border-bottom: 2px solid #ff6347;
 }
 
-/* Section: Contato */
 .contact-container {
     background: linear-gradient(to right, #4e73df, #2e59d9);
-    padding: 40px 20px; /* Ajustando o padding */
+    padding: 40px 20px; 
     text-align: center;
     flex: 1;
-    border-radius: 0; /* Removendo a curvatura indesejada */
+    border-radius: 0; 
 }
 
 .contact-header h2 {
@@ -104,7 +103,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 5px; /* Tornando os ícones mais quadrados */
+    border-radius: 5px; 
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 

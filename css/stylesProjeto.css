@@ -67,7 +67,6 @@ nav ul li a:hover {
     border-bottom: 2px solid #ff6347;
 }
 
-/* Main Section */
 .projects-container {
     display: flex;
     flex-wrap: wrap;
