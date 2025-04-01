@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
-    <link rel="stylesheet" href="styleContato.css">
-    <link rel="stylesheet" href="stylesresp.css">
+    <title>Contato - Rafael Athaliba</title>
+    <link rel="stylesheet" href="css/styleContato.css">
+    <link rel="stylesheet" href="resp/respContato.css">
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -29,22 +29,46 @@
             </nav>
         </div>
     </header>
-    
-    <div class="content">
-        <a href="https://wa.me/75991960101" target="_blank" class="link-item whatsapp">
-            <img src="assets/ZAP.png" alt="WhatsApp">
-        </a>
-        <a href="https://br.linkedin.com/in/athaliba" target="_blank" class="link-item linkedin">
-            <img src="assets/LINKEDIN.png" alt="LinkedIn">
-        </a>
-        <a href="https://www.instagram.com/ath.rafa" target="_blank" class="link-item instagram">
-            <img src="assets/INSTA.png" alt="Instagram">
-        </a>
-        <a href="https://workspace.google.com/intl/pt-BR/products/forms/" target="_blank" class="link-item form">
-            <img src="assets/FORMS.png" alt="Forms">
-        </a>
-    </div>
 
+    <!-- Section: Contato -->
+    <section class="contact-container">
+        <div class="contact-header">
+            <h2>Entre em Contato</h2>
+        </div>
+
+        <div class="social-links">
+            <a href="https://wa.me/75991960101" target="_blank" class="social-icon whatsapp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://br.linkedin.com/in/athaliba" target="_blank" class="social-icon linkedin">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/ath.rafa" target="_blank" class="social-icon instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://forms.gle/FjxAt3EQpNZuM45e7" target="_blank" class="social-icon form">
+                <i class="fas fa-file-alt"></i>
+            </a>
+        </div>
+
+        <div class="contact-form">
+            <h3>Envie uma Mensagem</h3>
+            <form action="mailto:rafaelathaliba45@gmail.com" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Seu Nome" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Seu Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Sua Mensagem" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Rafael Athaliba - Todos os direitos reservados.</p>
     </footer>

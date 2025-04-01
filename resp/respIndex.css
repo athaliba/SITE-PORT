@@ -1,0 +1,25 @@
+@media screen and (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .logo {
+        flex: 1;
+    }
+
+    .texto {
+        flex: 2;
+        text-align: left;
+    }
+
+    nav {
+        flex: 1;
+        text-align: right;
+    }
+
+    .gif-container {
+        padding: 0px 0;
+    }
+}
