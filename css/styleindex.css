@@ -4,15 +4,21 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
+    height: 100%;
+    overflow: hidden; /* Remove scroll vertical */
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a4d);
+    color: #ffffff;
     display: flex;
     flex-direction: column;
+}
+
+body {
     min-height: 100vh;
 }
 
+/* Header */
 header {
     background-color: #333;
     color: white;
@@ -20,6 +26,7 @@ header {
     text-align: center;
     position: relative;
     min-height: 100px;
+    flex-shrink: 0;
 }
 
 .container {
@@ -67,43 +74,133 @@ nav ul li a:hover {
     border-bottom: 2px solid #ff6347;
 }
 
+/* Welcome Section: ocupa o espaço restante entre header e footer */
 .welcome-section {
-    background: linear-gradient(to bottom, #4e73df, #2e59d9);
-    color: white;
-    padding: 60px 20px;
+    position: relative;
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    flex: 1;
 }
 
-.welcome-content h2 {
-    font-size: 2.5em;
+/* Canvas partículas ocupa todo espaço da welcome-section, atrás do conteúdo */
+canvas.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 0;
+}
+
+/* Glassmorphism - container */
+.glass-container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    animation: fadeInScale 0.5s ease-in-out;
+    z-index: 1;
+    max-width: 600px;
+    width: 90%;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Título e texto da glass-container */
+.glass-container h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
     margin-bottom: 20px;
+    background: linear-gradient(90deg, #9b59b6, #2980b9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 5px rgba(155,89,182,0.7);
 }
 
-.welcome-content p {
-    font-size: 1.3em;
+.glass-container p {
+    font-size: 1.3rem;
     margin-bottom: 30px;
+    color: rgba(255 255 255 / 0.8);
 }
 
+/* Botão dinâmico com gradiente e pulsação */
 .button {
     display: inline-block;
-    padding: 10px 20px;
-    font-size: 1.1em;
-    color: white;
-    background-color: #ff6347;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: 700;
     text-decoration: none;
-    border-radius: 5px;
+    color: white;
+    background: linear-gradient(270deg, #6a11cb, #2575fc, #6a11cb);
+    background-size: 600% 600%;
+    animation: gradientShift 10s ease infinite;
+    box-shadow: 0 0 10px rgba(101, 52, 213, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .button:hover {
-    background-color: #ff4500;
+    animation-play-state: paused;
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(101, 52, 213, 1);
 }
 
+/* Animação do gradiente do botão */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Divisor animado com efeito onda */
+.divider {
+    margin-top: 40px;
+    height: 4px;
+    width: 100%;
+    max-width: 200px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    border-radius: 2px;
+    animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(1.2);
+    }
+}
+
+/* Footer */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 15px 0;
     font-size: 1em;
-    margin-top: auto;
+    flex-shrink: 0;
 }
